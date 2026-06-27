@@ -2,4 +2,34 @@
 user_weight = float(input("请输入您的体重 (单位：kg) ："))
 user_height = float(input("请输入您的身高 (单位：m) ："))
 user_BMI = user_weight / (user_height ** 2)
+user_gender = input("请输入您的性别：(男/女)")
 print("您的BMI值为："+str(user_BMI))
+
+mood_index = int(input("心情指数："))
+if mood_index >= 60:
+    print("可以打游戏!")
+else:
+    print("不可以打游戏")
+
+# 偏瘦：user_BMI <= 18.5
+# 正常：18.5 < user_BMI <= 25
+# 偏胖：25 < user_BMI <= 30
+# 肥胖：user_BMI > 30
+if user_gender == "男":
+    if user_BMI <= 18.5:
+        print("男士你好！此BMI值属于偏瘦范围")
+    elif 18.5 < user_BMI <= 25:
+        print("男士你好！此BMI值属于正常范围")
+    elif 25 < user_BMI <= 30:
+        print("男士你好！此BMI值属于偏胖范围")
+    else:
+        print("男士你好！此BMI值属于肥胖范围")
+else:
+    if user_BMI <= 18.5:
+        print("女士你好！此BMI值属于偏瘦范围")
+    elif 18.5 < user_BMI <= 25:
+        print("女士你好！此BMI值属于正常范围")
+    elif 25 < user_BMI <= 30:
+        print("女士你好！此BMI值属于偏胖范围")
+    else:
+        print("女士你好！此BMI值属于肥胖范围")
